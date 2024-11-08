@@ -32,7 +32,6 @@ public class CanvasManager : MonoBehaviour
         menuCanvas.SetActive(false);
         loadingCanvas.SetActive(true);
         gameCanvas.SetActive(false);
-        StartCoroutine(WaitAndSwitchCanvas());
     }
 
     public void ShowGameCanvas()
@@ -40,11 +39,5 @@ public class CanvasManager : MonoBehaviour
         menuCanvas.SetActive(false);
         loadingCanvas.SetActive(false);
         gameCanvas.SetActive(true);
-    }
-
-    private IEnumerator WaitAndSwitchCanvas()
-    {
-        yield return new WaitForSeconds(2f);
-        ShowGameCanvas();
     }
 }

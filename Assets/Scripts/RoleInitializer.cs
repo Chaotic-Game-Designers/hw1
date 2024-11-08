@@ -11,7 +11,7 @@ public class RoleInitializer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int playerCount = PlayerPrefs.GetInt("playerCount", 8);
+        int playerCount = PlayerPrefs.GetInt("PlayerCount", 8);
         InitializeRoles(playerCount);
         ShuffleRoles();
         SaveRolesForGame();
@@ -30,14 +30,14 @@ public class RoleInitializer : MonoBehaviour
         {
             case 8:
             default:
-                roles = new List<string>(8) { "Godfather", "Mafia", "Masked Mafia", "Detective", "Doctor", "Sniper", "Citizen", "Citizen" };
+                roles = new List<string>() { "Godfather", "Mafia", "Masked Mafia", "Detective", "Doctor", "Sniper", "Citizen", "Citizen" };
                 break;
             case 10:
-                roles = new List<string>(10) { "Godfather", "Mafia", "Masked Mafia", "Detective", "Doctor", "Sniper", "Mayer", "Citizen", "Citizen", "Citizen" };
+                roles = new List<string>() { "Godfather", "Mafia", "Masked Mafia", "Detective", "Doctor", "Sniper", "Mayer", "Citizen", "Citizen", "Citizen" };
                 break;
 
             case 12:
-                roles = new List<string>(12) { "Godfather", "Mafia", "Masked Mafia", "Serial Killer", "Detective", "Doctor", "Sniper", "Mayer", "Citizen", "Citizen", "Mason", "Savior" };
+                roles = new List<string>() { "Godfather", "Mafia", "Masked Mafia", "Serial Killer", "Detective", "Doctor", "Sniper", "Mayer", "Citizen", "Citizen", "Mason", "Savior" };
                 break;
         }
     }
