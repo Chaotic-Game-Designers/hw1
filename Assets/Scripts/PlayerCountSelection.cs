@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCountSelection : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class PlayerCountSelection : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetPlayerCount(int count)
+    {
+        PlayerPrefs.SetInt("PlayerCount", count);
     }
 }
